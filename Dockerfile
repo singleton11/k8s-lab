@@ -1,0 +1,12 @@
+FROM scratch
+
+ENV K8SLAB_LOCAL_HOST 0.0.0.0
+ENV K8SLAB_LOCAL_PORT 8080
+ENV K8SLAB_LOG_LEVEL 0
+
+EXPOSE $K8SLAB_LOCAL_PORT
+
+COPY certs /etc/ssl/
+COPY bin/linux-amd64/k8s-lab /
+
+CMD ["/k8s-lab"]

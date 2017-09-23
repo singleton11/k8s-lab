@@ -1,0 +1,6 @@
+vendor
+certs
+.coverprofile
+coverage.txt
+bin
+.idea/
